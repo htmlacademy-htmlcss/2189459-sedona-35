@@ -20,5 +20,8 @@
   "css.lint.zeroUnits": "error",
   "html.format.endWithNewline": true,
   "html.format.indentInnerHtml": true,
-  "workbench.colorTheme": "Default Light+"
+  "workbench.colorTheme": "Default Light+",
+  "githubPullRequests.ignoredPullRequestBranches": [
+    "master"
+  ]
 }
