@@ -494,7 +494,7 @@ body {
   line-height: 26px;
   text-align: center;
   margin: 0 auto;
-  padding-top: 96px;
+  padding-top: 140px;
   padding-bottom: 104px;
 }
 
@@ -608,8 +608,6 @@ body {
   fill: #E5E5E5;
 }
 
-
-
 .footer-social-list {
   list-style-type: none;
   padding: 0;
@@ -655,13 +653,14 @@ body {
   background-color: rgba(242, 242, 242, 0.8);
 }
 
-.modal-container-close/ {
+.modal-container-close {
   display: none;
 }
 
 .modal {
   position: relative;
   margin: auto;
+  margin-top: 10px;
   padding: 64px 70px;
   background-color: #ffffff;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
@@ -705,6 +704,7 @@ body {
   padding: 0;
   display: flex;
   flex-wrap: nowrap;
+  margin-bottom: 22px;
 }
 
 .form-label {
@@ -721,6 +721,10 @@ body {
   min-width: 120px;
 }
 
+.form-label-children {
+  padding-left: 84px;
+}
+
 .modal-form {
   width: 440px;
   height: 52px;
@@ -735,7 +739,7 @@ body {
   font-family: "PT Sans", "Arial", sans-serif;
   background-image: url("/images/controls/calendar-icon.svg");
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: 398px;
 }
 
 .modal-input {
@@ -771,7 +775,7 @@ body {
   line-height: 21px;
   padding: 0;
   margin: 0;
-  padding-left: 163px;
+  padding-left: 18px;
   padding-top: 4px;
 
 }
@@ -783,7 +787,7 @@ body {
   line-height: 21px;
   padding: 0;
   margin: 0;
-  padding-left: 163px;
+  padding-left: 18px;
   padding-top: 4px;
 }
 
@@ -846,7 +850,7 @@ body {
   padding: 18px;
   border-radius: 10px;
   display: block;
-  width: 256px;
+  width: 216px;
 }
 
 .tooltip-text:before {
@@ -855,11 +859,12 @@ body {
   width: 19px;
   height: 9px;
   position: absolute;
-  top: 100%;
+  top: 17px;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
+
 }
 
 .modal-button {
@@ -989,23 +994,16 @@ body {
   padding-left: 5px;
 }
 
-.control-input[type="checkbox"]:checked + .control-mark::before,
-.control-input[type="checkbox"]:checked + .control-mark::after {
+.control-input[type="checkbox"]:checked + .control-mark::before {
   position: absolute;
   top: 7px;
   left: 2px;
   width: 12px;
-  height: 2px;
-  background-color: #3F5E72;
+  height: 5px;
   content: "";
-}
-
-.control-input[type="checkbox"]:checked + .control-mark::before {
-  transform: rotate(75deg);
-}
-
-.control-input[type="checkbox"]:checked + .control-mark::after {
-  transform: rotate(-25deg);
+  border-bottom: 2px solid #3f5e72;
+  border-left: 2px solid #3f5e72;
+  transform: rotate(-45deg);
 }
 
 .control-input[type="radio"] + .control-mark {
@@ -1042,7 +1040,7 @@ body {
   position: absolute;
   height: 4px;
   background-color: #ffffff;
-  margin-top: 68px;
+  margin-top: 44px;
 }
 
 .range-toggle {
@@ -1099,6 +1097,11 @@ body {
   padding: 0;
   padding-left: 21px;
   margin: 0;
+}
+
+.range-input::-webkit-inner-spin-button,
+.range-input::-webkit-inner-spin-button {
+  display: none;
 }
 
 
@@ -1195,6 +1198,7 @@ body {
 
 .select-control {
   margin: 0;
+  margin-right: 25px;
   padding: 0;
   padding-left: 14px;
   width: 292px;
@@ -1221,7 +1225,6 @@ body {
 .view-type-link {
   width: 48px;
   height: 48px;
-  padding-right: 2px;
   position: relative;
   display: block;
 }

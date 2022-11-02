@@ -163,18 +163,16 @@
               <li class="footer-social-item">
                 <a class="footer-social-link link-telegram" href="https://t.me/htmlacademy ">
                   <span class="visually-hidden">Социальная сеть телеграм</span>
-                  <svg class="footer-social-svg" aria-hidden="true" focusable="false" width="48" height="41" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M16.79.96.84 7.1c-1.09.44-1.08 1.05-.2 1.32l4.1 1.28 9.47-5.98c.44-.27.85-.13.52.17l-7.68 6.93-.28 4.22c.41 0 .6-.2.83-.41l1.99-1.94 4.13 3.06c.77.42 1.31.2 1.5-.71l2.72-12.8c.28-1.1-.43-1.61-1.16-1.28Z"></path>
-                  </svg>
+                  <svg class="footer-social-svg" aria-hidden="true" focusable="false" width="48" height="41" viewBox="0 0 48 41" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M31.785 12.9557L15.8405 19.1042C14.7523 19.5413 14.7586 20.1483 15.6408 20.419L19.7344 21.696L29.2058 15.7201C29.6537 15.4477 30.0629 15.5942 29.7265 15.8928L22.0528 22.8183H22.051L22.0528 22.8192L21.7705 27.0387C22.1841 27.0387 22.3667 26.8489 22.5987 26.625L24.5871 24.6915L28.7229 27.7464C29.4855 28.1664 30.0332 27.9506 30.2229 27.0405L32.9379 14.2453C33.2158 13.1311 32.5126 12.6266 31.785 12.9557Z"/>
+                      </svg>
                 </a>
               </li>
               <li class="footer-social-item">
                 <a class="footer-social-link link-youtube" href="https://www.youtube.com/user/htmlacademyru">
                   <span class="visually-hidden">Социальная сеть ютьюб</span>
                   <svg class="footer-social-svg" aria-hidden="true" focusable="false" width="48" height="41" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M31.94 12.36H16.51c-1.86 0-3.18 1.59-3.18 3.4v10.09c0 1.91 1.32 3.5 3.18 3.5h15.65c1.64 0 3.17-1.59 3.17-3.4v-10.2c-.22-1.8-1.53-3.4-3.39-3.4ZM20.99 24.89v-8.07l7.34 4.04-7.34 4.03Z"></path>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M31.94 12.36H16.51c-1.86 0-3.18 1.59-3.18 3.4v10.09c0 1.91 1.32 3.5 3.18 3.5h15.65c1.64 0 3.17-1.59 3.17-3.4v-10.2c-.22-1.8-1.53-3.4-3.39-3.4ZM20.99 24.89v-8.07l7.34 4.04-7.34 4.03Z"></path>
                   </svg>
                 </a>
               </li>
@@ -210,26 +208,31 @@
         <section class="modal-content">
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
           <form class="check-in" action="https://echo.htmlacademy.ru/" method="post">
-            <p class="field-group">
+            <div class="field-group">
               <label class="form-label" for="check-in-date">
                 Дата заезда:
               </label>
-              <input class="modal-form" type="text" id="check-in-date" name="check-in-date" placeholder="Укажите дату"
+              <div class="modal-form-container">
+                <input class="modal-form" type="text" id="check-in-date" name="check-in-date" placeholder="Укажите дату"
                 value="27 апреля 2020">
-            </p>
-            <span class="check-in-text">Мы не можем отправить вас в прошлое.</span>
-            <form class="check-out" action="https://echo.htmlacademy.ru/" method="post">
-              <p class="field-group">
+                <span class="check-in-text">Мы не можем отправить вас в прошлое.</span>
+              </div>
+            </div>
+
+              <div class="field-group">
                 <label class="form-label" for="check-out-date">
                   Дата выезда:
                 </label>
+                <div class="modal-form-container">
                 <input class="modal-form" type="text" id="check-out-date" name="check-out-date"
                   placeholder="Укажите дату" value="1 сентября 2023">
-              </p>
-              <span class="check-out-text">На эти даты есть свободные номера. Пока есть.</span>
+                  <span class="check-out-text">На эти даты есть свободные номера. Пока есть.</span>
+                </div>
+              </div>
+
 
               <div class="number-people-wrapper">
-              <p class="field-group">
+              <div class="field-group">
                 <label class="form-label" for="adults-number">
                   Взрослые:
                 </label>
@@ -242,10 +245,10 @@
                   <span class="visually-hidden">Кнопка плюс</span>
                 </button>
                 </div>
-              </p>
-              </p>
-              <p class="field-group">
-                <span class="form-label">
+              </div>
+
+              <div class="field-group">
+                <span class="form-label form-label-children">
                 <label class="form-label" for="children-number">Дети:</label>
                 <span class="tooltip">
                     <button class="modal-children-info" type="button">
@@ -266,8 +269,9 @@
                   <span class="visually-hidden">Кнопка плюс</span>
                 </button>
                 </div>
-              </p>
               </div>
+              </div>
+
               <button class="modal-button blue-button" type="submit">Найти</button>
             </form>
         </section>
