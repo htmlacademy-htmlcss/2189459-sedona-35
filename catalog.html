@@ -31,10 +31,16 @@
             <li class="navigation-user-item nav-user-search">
               <a class="navigation-link" href="#">
                 <span class="visually-hidden">Поиск</span>
+                <svg class="nav-icon" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19.5 18.0083L15.8 14.3287C16.8 13.0359 17.5 11.3453 17.5 9.4558C17.5 5.08011 13.9 1.5 9.5 1.5C5.1 1.5 1.5 5.17956 1.5 9.55525C1.5 13.9309 5.1 17.511 9.5 17.511C11.3 17.511 13 16.9144 14.4 15.8204L18.1 19.5L19.5 18.0083ZM9.5 15.5221C6.2 15.5221 3.5 12.837 3.5 9.55525C3.5 6.27348 6.2 3.5884 9.5 3.5884C12.8 3.5884 15.5 6.27348 15.5 9.55525C15.5 12.837 12.8 15.5221 9.5 15.5221Z"></path>
+                </svg>
               </a>
             </li>
             <li class="navigation-user-item nav-user-like">
               <a class="navigation-link" href="#">
+                <svg class="nav-icon" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.9 17a.9.9 0 0 1-.8-.4c-5.4-6.1-6.7-7.5-7-7.9A5.4 5.4 0 0 1 5.5 0C6.8 0 8 .5 9 1.3a5.46 5.46 0 0 1 9 4.1c0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5c.3.4 3.5 4 6.1 6.9l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4-.7-.8-1.7-1.3-2.7-1.3-1.8 0-3.3 1.5-3.3 3.3-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z"></path>
+                </svg>
                 <span class="visually-hidden">Мне нравится</span>
                 <span class="like-number">12</span>
               </a>
@@ -68,20 +74,23 @@
                 <ul class="hotels-filter-list">
                   <li class="hotels-filter-item">
                     <label class="control">
-                      <input class="control-input" type="checkbox" name="pool" checked>
-                      Бассейн
+                      <input class="control-input visually-hidden" type="checkbox" name="pool" checked>
+                      <span class="control-mark"></span>
+                      <span class="control-label">Бассейн</span>
                     </label>
                   </li>
                   <li class="hotels-filter-item">
                     <label class="control">
-                      <input class="control-input" type="checkbox" name="parking" checked>
-                      Парковка
+                      <input class="control-input visually-hidden" type="checkbox" name="parking" checked>
+                      <span class="control-mark"></span>
+                      <span class="control-label">Парковка</span>
                     </label>
                   </li>
                   <li class="hotels-filter-item">
                     <label class="control">
-                      <input class="control-input" type="checkbox" name="Wi-Fi">
-                      Wi-Fi
+                      <input class="control-input visually-hidden" type="checkbox" name="Wi-Fi">
+                      <span class="control-mark"></span>
+                      <span class="control-label">Wi-Fi</span>
                     </label>
                   </li>
                 </ul>
@@ -92,29 +101,53 @@
                 <ul class="hotels-filter-list">
                   <li class="hotels-filter-item">
                     <label class="control">
-                      <input class="control-input" type="radio" name="hotel-group" value="hotel" checked>
-                      Гостиница
+                      <input class="control-input visually-hidden" type="radio" name="hotel-group" value="hotel" checked>
+                      <span class="control-mark"></span>
+                      <span class="control-label">Гостиница</span>
                     </label>
                   </li>
                   <li class="hotels-filter-item">
                     <label class="control">
-                      <input class="control-input" type="radio" name="hotel-group" value="motel">
-                      Мотель
+                      <input class="control-input visually-hidden" type="radio" name="hotel-group" value="motel">
+                      <span class="control-mark"></span>
+                      <span class="control-label">Мотель</span>
                     </label>
                   </li>
                   <li class="hotels-filter-item">
                     <label class="control">
-                      <input class="control-input" type="radio" name="hotel-group" value="apartment">
-                      Апартаменты
+                      <input class="control-input visually-hidden" type="radio" name="hotel-group" value="apartment">
+                      <span class="control-mark"></span>
+                      <span class="control-label">Апартаменты</span>
                     </label>
                   </li>
                 </ul>
               </fieldset>
 
-              <fieldset class="hotels-filter-group">
+              <fieldset class="hotels-filter-group hotels-filter-group-range">
                 <legend class="hotels-filter-title">Стоимость, ₽:</legend>
-                <input type="range" min="0" max="10000" step="1000" id="price" name="price">
-                <output class="out-price"></output>
+                <div class="range">
+                  <div class="range-wrapper-inputs">
+                    <label class="catalog-filter-label">
+                      <input class="range-input" type="number" value="0" name="min-price" placeholder="от">
+                    </label>
+                    <label class="catalog-filter-label">
+                      <input class="range-input" type="number" value="9000" name="max-price" placeholder="до">
+                    </label>
+                  </div>
+
+                  <div class="range-scale">
+                    <div class="range-bar" style="right: 61px; width: 226px">
+                      <button class="range-toggle toggle-min">
+                        <span class="visually-hidden">Изменить минимальную цену.</span>
+                      </button>
+                      <button class="range-toggle toggle-max">
+                        <span class="visually-hidden">Изменить максимальную цену.</span>
+                      </button>
+                    </div>
+                  </div>
+
+
+                </div>
               </fieldset>
 
               <fieldset class="hotels-filter-group hotels-filter-group-buttons">
@@ -134,10 +167,10 @@
             <option value="expensive">Сначала дорогие</option>
           </select>
           <ul class="view-type-list">
-            <li class="view-type-item">
+            <li class="view-type-item view-type-item-current">
           <a href="#" class="view-type-link view-type-link-cards">
             <span class="visually-hidden">Показать карточки</span>
-            <svg aria-hidden="true" focusable="false" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+            <svg class="view-icon" aria-hidden="true" focusable="false" width="46" height="46" viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M20 17h-4v6h4v-6ZM32 17h-4v6h4v-6ZM26 17h-4v6h4v-6ZM20 25h-4v6h4v-6ZM32 25h-4v6h4v-6ZM26 25h-4v6h4v-6Z"></path>
             </svg>
           </a>
@@ -145,15 +178,16 @@
             <li class="view-type-item">
           <a href="#" class="view-type-link view-type-link-display">
             <span class="visually-hidden">Показать слайдшоу</span>
-            <svg aria-hidden="true" focusable="false" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M14 2V8H2V2H14ZM16 0H0V10H16V0Z M16 12H0V14H16V12Z"></path>
+            <svg class="view-icon" aria-hidden="true" focusable="false" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M32 29H16V31H32V29Z"/>
+              <path d="M30 19V25H18V19H30ZM32 17H16V27H32V17Z"/></path>
             </svg>
           </a>
             </li>
             <li class="view-type-item">
           <a href="#" class="view-type-link view-type-link-list">
             <span class="visually-hidden">Показать список</span>
-            <svg aria-hidden="true" focusable="false" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+            <svg class="view-icon" aria-hidden="true" focusable="false" width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M18 17h-2v2h2v-2ZM32 17H20v2h12v-2ZM18 21h-2v2h2v-2ZM32 21H20v2h12v-2ZM18 25h-2v2h2v-2ZM32 25H20v2h12v-2ZM18 29h-2v2h2v-2ZM32 29H20v2h12v-2Z"></path>
             </svg>
           </a>
@@ -249,10 +283,10 @@
             <a class="pagination-link pagination-link-current">1</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link">2</a>
+            <a class="pagination-link blue-button">2</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link">3</a>
+            <a class="pagination-link blue-button">3</a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link">4</a>
@@ -263,7 +297,7 @@
             </a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link">10</a>
+            <a class="pagination-link blue-button">10</a>
           </li>
         </ul>
         </section>
@@ -271,7 +305,7 @@
 
       <footer class="page-footer">
         <section class="subscribe">
-          <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
+          <h2 class="subscribe-title subscribe-title-black">Подпишитесь на рассылку</h2>
           <p class="subscribe-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscribe-form" action="http://echo.htmlacademy.ru/" method="post">
             <label for="subscribe-email" class="visually-hidden">Ввести имейл</label>
