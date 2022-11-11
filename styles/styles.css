@@ -96,13 +96,6 @@ body {
   cursor: pointer;
 }
 
-.navigation-user-list,
-.navigation-link {
-  min-width: 42px;
-  min-height: 64px;
-  padding: 0;
-}
-
 .navigation-user-list {
   display: flex;
   justify-content: flex-end;
@@ -527,7 +520,7 @@ body {
   text-align: center;
   margin: 0 auto;
   padding-top: 96px;
-  padding-bottom: 103px;
+  padding-bottom: 104px;
 }
 
 .subscribe--background {
@@ -851,7 +844,6 @@ body {
   margin: 0;
   padding-left: 18px;
   padding-top: 4px;
-
 }
 
 .allow-text {
@@ -1102,9 +1094,6 @@ body {
   border-radius: 4px;
 }
 
-.control:active,
-.control-label {}
-
 .control-label {
   padding-left: 5px;
 }
@@ -1124,7 +1113,6 @@ body {
 .control-input[type="checkbox"]:focus + .control-mark {
   outline: 3px solid #83B3D3;
 }
-
 
 .control-input[type="radio"] + .control-mark {
   border-radius: 50%;
@@ -1263,7 +1251,6 @@ body {
   display: none;
 }
 
-
 .hotels-filter-list {
   list-style-type: none;
   padding: 0;
@@ -1328,11 +1315,10 @@ body {
 .button-reset:focus {
   outline: 3px solid #83b3d3;
   border-radius: 4px;
-
 }
 
 .button-reset:active {
-
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .button-reset:disabled {
@@ -1475,13 +1461,14 @@ body {
 .hotel-list {
   list-style-type: none;
   display: grid;
-  padding: 0;
   padding-left: 68px;
   padding-right: 70px;
-  padding-top: 41px;
+  padding-top: 40px;
   margin: 0;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 18px;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 36px;
 }
 
 .hotel-card-item {
@@ -1609,8 +1596,24 @@ body {
   margin-top: 8px;
 }
 
+.stars--one {
+  width: 35px;
+}
+
+.stars--two {
+  width: 44px;
+}
+
+.stars--three {
+  width: 68px;
+}
+
 .stars--four {
   width: 89px;
+}
+
+.stars--five {
+  width: 107px;
 }
 
 .rating-number {
@@ -1639,7 +1642,7 @@ body {
   flex-wrap: wrap;
   margin-right: 8px;
   margin-left: 30px;
-  margin-top: 75px;
+  margin-top: 40px;
   margin-bottom: 62px;
 }
 
@@ -1649,7 +1652,7 @@ body {
   text-decoration: none;
   line-height: 36px;
   font-weight: 700;
-  font-size: 20;
+  font-size: 20px;
   display: block;
   box-sizing: border-box;
   min-width: 60px;
@@ -1666,7 +1669,6 @@ body {
 
 .pagination-link:focus {
   background-color: #68a2ca;
-  outline: 1px solid #82b3d3;
 }
 
 .pagination-link:active {
@@ -1697,8 +1699,7 @@ body {
   background-color: #ffffff;
   background-image: url("/images/controls/pagination-dots.svg");
   background-repeat: no-repeat;
-  background-position: 23px 41px;
-
+  background-position: 22px 36px;
 }
 
 .page-footer-catalog {
