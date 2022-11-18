@@ -629,7 +629,7 @@ body {
 }
 
 .footer-social {
-  width: 167px;
+  width: 145px;
 }
 
 .footer-social a {
@@ -667,7 +667,7 @@ body {
 }
 
 .footer-contacts {
-  width: 340px;
+  width: 335px;
 }
 
 .footer-contacts-phone {
@@ -677,7 +677,6 @@ body {
   font-size: 40px;
   line-height: 40px;
   text-align: center;
-  display: block;
 }
 
 .footer-contacts-phone:hover {
@@ -693,7 +692,7 @@ body {
 }
 
 .footer-htmlacademy {
-  width: 120px;
+  width: 115px;
 }
 
 .htmlacademy-link {
