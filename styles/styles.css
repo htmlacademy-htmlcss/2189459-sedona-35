@@ -1073,12 +1073,12 @@ input[type="number"] {
   font-size: 16px;
   line-height: 21px;
   padding-left: 21px;
-  background-image: url("/images/controls/breadcrumbs-arrow.svg");
+  background-image: url("../images/controls/breadcrumbs-arrow.svg");
   background-repeat: no-repeat;
 }
 
 .breadcrumbs-link-home {
-  background-image: url("/images/controls/home.svg");
+  background-image: url("../images/controls/home.svg");
   background-repeat: no-repeat;
   margin-left: 71px;
 }
@@ -1414,7 +1414,7 @@ input[type="number"] {
   border-radius: 4px;
   font-family: "PT Sans", sans-serif;
   appearance: none;
-  background-image: url("/images/controls/arrow.svg");
+  background-image: url("../images/controls/arrow.svg");
   background-repeat: no-repeat;
   background-position: 256px;
   display: block;
@@ -1628,7 +1628,7 @@ input[type="number"] {
 }
 
 .stars {
-  background-image: url("/images/controls/blue-star.svg");
+  background-image: url("../images/controls/blue-star.svg");
   background-repeat: space;
   height: 17px;
   width: 140px;
@@ -1737,7 +1737,7 @@ input[type="number"] {
 
 .pagination-next {
   background-color: #ffffff;
-  background-image: url("/images/controls/pagination-dots.svg");
+  background-image: url("../images/controls/pagination-dots.svg");
   background-repeat: no-repeat;
   background-position: 22px 36px;
 }
